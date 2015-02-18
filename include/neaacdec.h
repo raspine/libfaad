@@ -227,6 +227,10 @@ char NEAACDECAPI NeAACDecInit2(NeAACDecHandle hDecoder,
 char NEAACDECAPI NeAACDecInitDRM(NeAACDecHandle *hDecoder, unsigned long samplerate,
                                  unsigned char channels);
 
+/* Init the library for DAB */
+char NEAACDECAPI NeAACDecInitDAB(NeAACDecHandle *hDecoder, unsigned long samplerate,
+                                 unsigned char channels, unsigned char bSbr);
+
 void NEAACDECAPI NeAACDecPostSeekReset(NeAACDecHandle hDecoder, long frame);
 
 void NEAACDECAPI NeAACDecClose(NeAACDecHandle hDecoder);

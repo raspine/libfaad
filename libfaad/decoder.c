@@ -503,6 +503,36 @@ char NEAACDECAPI NeAACDecInitDRM(NeAACDecHandle *hpDecoder,
 }
 #endif
 
+char NEAACDECAPI NeAACDecInitDAB(NeAACDecHandle *hpDecoder,
+                                 unsigned long samplerate,
+                                 unsigned char channels,
+								 unsigned char sbr)
+{
+    NeAACDecStruct** hDecoder = (NeAACDecStruct**)hpDecoder;
+    if (hDecoder == NULL)
+        return 1; /* error */
+
+    NeAACDecClose(*hDecoder);
+
+    *hDecoder = NeAACDecOpen();
+
+    (*hDecoder)->config.defObjectType = HE_AAC;
+
+    (*hDecoder)->config.defSampleRate = samplerate;
+    (*hDecoder)->frameLength = 960;
+    (*hDecoder)->sf_index = get_sr_index((*hDecoder)->config.defSampleRate);
+    (*hDecoder)->object_type = (*hDecoder)->config.defObjectType;
+
+    (*hDecoder)->channelConfiguration = channels;
+
+    (*hDecoder)->sbr_present_flag = sbr;
+
+    (*hDecoder)->fb = filter_bank_init((*hDecoder)->frameLength);
+
+    return 0;
+}
+
+
 void NEAACDECAPI NeAACDecClose(NeAACDecHandle hpDecoder)
 {
     uint8_t i;
