@@ -31,7 +31,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <neaacdec.h>
+#include <neaacdec2.h>
 #include <mp4ff.h>
 
 #include "audio.h"

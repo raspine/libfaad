@@ -2,7 +2,7 @@ lib_LTLIBRARIES = libfaad.la
 
 AM_CFLAGS	= -iquote $(top_srcdir)/include
 include_HEADERS = $(top_srcdir)/include/faad.h \
-		  $(top_srcdir)/include/neaacdec.h
+		  $(top_srcdir)/include/neaacdec2.h
 
 libfaad_la_LDFLAGS = -version-info 2:0:0
 libfaad_la_LIBADD = -lm

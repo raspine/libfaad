@@ -3,7 +3,7 @@
  * and outputs the PCM audio data to stdout.
  */
 
-#include <neaacdec.h>
+#include <neaacdec2.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

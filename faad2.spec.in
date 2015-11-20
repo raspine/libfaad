@@ -120,7 +120,7 @@ rm -rf %{buildroot}
 %{_libdir}/libfaad.a
 %{_libdir}/libfaad.la
 %{_includedir}/faad.h
-%{_includedir}/neaacdec.h
+%{_includedir}/neaacdec2.h
 %{_includedir}/mp4ff.h
 %{_libdir}/libmp4ff.a
 

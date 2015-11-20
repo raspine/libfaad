@@ -35,7 +35,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <math.h>
-#include <neaacdec.h>
+#include <neaacdec2.h>
 #include "audio.h"
 
 

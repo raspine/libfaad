@@ -23,7 +23,7 @@
 #include <xmms/titlestring.h>
 #endif /*HAVE_BMP*/
 
-#include "neaacdec.h"
+#include "neaacdec2.h"
 #include "mp4ff.h"
 
 #define MP4_DESCRIPTION	"MP4 & MPEG2/4-AAC audio player - 1.2.x"

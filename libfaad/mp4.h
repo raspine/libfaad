@@ -35,7 +35,7 @@
 extern "C" {
 #endif
 
-#include "neaacdec.h"
+#include "neaacdec2.h"
 
 int8_t AudioSpecificConfig2(uint8_t *pBuffer,
                             uint32_t buffer_size,
